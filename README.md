@@ -26,20 +26,3 @@ This system uses **Forward Chaining**.
 3. Run the main script via terminal:
    ```bash
    python main.py
-
-
-graph TD
-    Car -- has_part --> Electrical_System
-    Car -- has_part --> Fuel_System
-    Electrical_System -- has_part --> Battery
-    Electrical_System -- has_part --> Starter_Motor
-    Fuel_System -- has_part --> Fuel_Pump
-    
-    Lights_Dim -- indicates --> Battery_Low
-    Engine_Cranks_Slowly -- indicates --> Battery_Low
-    Battery_Low -- causes --> Rapid_Clicking
-    Rapid_Clicking -- indicates --> Battery_Dead
-    Battery_Dead -- requires --> Replace_Battery
-    
-    No_Fuel_Pump_Whine -- indicates --> Bad_Fuel_Pump
-    Bad_Fuel_Pump -- requires --> Replace_Fuel_Pump
